@@ -1,0 +1,95 @@
+.page { width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+.screen {
+  background: var(--ink);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 700px;
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  color: var(--paper); min-height: 500px;
+}
+
+.modeLabel {
+  font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: #555;
+  margin-bottom: 14px;
+}
+
+.taskName {
+  font-size: 28px; color: var(--paper);
+  line-height: 1.2; max-width: 480px; margin-bottom: 8px;
+}
+
+.taskMeta {
+  display: flex; gap: 8px; align-items: center;
+  margin-bottom: 32px;
+}
+.tag {
+  font-size: 11px; padding: 3px 9px;
+  border-radius: 100px; background: #2a2720; color: #666;
+}
+.priorityLabel { font-size: 11px; color: #555; }
+
+.noTask { font-size: 24px; color: #555; margin-bottom: 32px; }
+
+.ring {
+  position: relative; width: 160px; height: 160px;
+  margin-bottom: 28px;
+}
+.ring svg { transform: rotate(-90deg); }
+.ringBg { fill: none; stroke: #2a2a2a; stroke-width: 6; }
+.ringFill {
+  fill: none; stroke-width: 6; stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+.timerText {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'DM Serif Display', serif;
+  font-size: 38px; color: var(--paper);
+  letter-spacing: -2px;
+}
+
+.controls { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+.btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: none; background: #2a2a2a;
+  color: var(--paper); font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.btn:hover { background: #333; }
+.primary { width: 56px !important; height: 56px !important; background: var(--accent) !important; font-size: 20px !important; }
+.primary:hover { background: #b04e22 !important; }
+
+.doneBtn {
+  margin-top: 4px; padding: 9px 20px;
+  background: transparent; border: 1px solid #333;
+  border-radius: 100px; color: #888;
+  font-size: 12px; letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+.doneBtn:hover { border-color: var(--priority-low); color: var(--priority-low); }
+
+.queue {
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid #252525;
+  width: 100%; max-width: 400px;
+}
+.queueLabel {
+  font-size: 10px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #444; margin-bottom: 8px;
+}
+.queueItem {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 8px;
+  font-size: 12px; color: #555; text-align: left;
+  transition: background 0.15s; cursor: pointer;
+}
+.queueItem:hover { background: #222; color: #888; }
+.queueActive { color: var(--paper) !important; }
+.qNum { font-size: 10px; color: #333; min-width: 14px; }
+
+.emptyHint { font-size: 12px; color: #444; margin-top: 16px; }

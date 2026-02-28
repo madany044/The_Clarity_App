@@ -1,0 +1,66 @@
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 12px; border-radius: 11px;
+  transition: background 0.15s;
+  position: relative;
+}
+.item:hover { background: var(--accent-light); }
+.done { opacity: 0.45; }
+
+.check {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid var(--subtle);
+  background: var(--paper);
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; cursor: pointer;
+}
+.done .check { background: var(--ink); border-color: var(--ink); }
+.check:hover { border-color: var(--ink); }
+
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.body { flex: 1; min-width: 0; cursor: pointer; }
+
+.name {
+  font-size: 14px; color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.done .name { text-decoration: line-through; }
+
+.meta { display: flex; gap: 8px; margin-top: 2px; align-items: center; flex-wrap: wrap; }
+
+.due { font-size: 11px; color: var(--muted); }
+.overdue { color: var(--priority-high) !important; }
+.today { color: var(--priority-med) !important; }
+
+.tag {
+  font-size: 10px; padding: 2px 7px;
+  border-radius: 100px;
+  background: var(--subtle); color: var(--muted); font-weight: 500;
+}
+
+.actions {
+  display: flex; gap: 4px; align-items: center;
+  opacity: 0; transition: opacity 0.15s;
+}
+.item:hover .actions { opacity: 1; }
+
+.editBtn, .deleteBtn {
+  width: 24px; height: 24px;
+  border-radius: 6px; border: none;
+  background: transparent; font-size: 14px;
+  color: var(--muted); display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.editBtn:hover { background: var(--subtle); color: var(--ink); }
+.deleteBtn:hover { background: #fdf0f0; color: var(--danger); }
+.confirmBtn, .cancelBtn {
+  font-size: 11px; padding: 3px 8px;
+  border-radius: 6px; border: none; font-weight: 500;
+}
+.confirmBtn { background: var(--danger); color: white; }
+.cancelBtn  { background: var(--subtle); color: var(--muted); }

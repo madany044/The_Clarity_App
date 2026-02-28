@@ -1,0 +1,74 @@
+.page { width: 100%; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.title { font-size: 28px; letter-spacing: -0.5px; }
+.title span { color: var(--muted); font-size: 22px; }
+.nav { display: flex; gap: 6px; }
+.navBtn {
+  padding: 8px 16px; border-radius: 10px;
+  border: 1.5px solid var(--subtle);
+  background: var(--paper); font-size: 13px; color: var(--ink);
+  transition: all 0.15s;
+}
+.navBtn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.calCard {
+  background: var(--paper);
+  border: 1px solid var(--subtle);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.grid {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 4px; margin-bottom: 8px;
+}
+.dayName {
+  text-align: center; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.8px; text-transform: uppercase;
+  color: var(--muted); padding: 6px 0;
+}
+.day {
+  aspect-ratio: 1; display: flex;
+  flex-direction: column; align-items: center; justify-content: center;
+  border-radius: 10px; font-size: 13px;
+  cursor: pointer; transition: all 0.15s; gap: 3px;
+}
+.day:hover { background: var(--subtle); }
+.otherMonth { color: var(--subtle); pointer-events: none; }
+.today { background: var(--ink) !important; color: white !important; font-weight: 600; }
+.selected { background: var(--accent-light); color: var(--accent); font-weight: 500; }
+
+.dots { display: flex; gap: 2px; }
+.dot  { width: 4px; height: 4px; border-radius: 50%; }
+
+.dayPanel {
+  background: var(--paper);
+  border: 1px solid var(--subtle);
+  border-radius: 16px; padding: 24px;
+  position: sticky;
+  top: 24px;
+}
+.dayPanelHeader {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px;
+}
+.dayPanelTitle { font-size: 20px; }
+.addBtn {
+  padding: 7px 16px; border-radius: 100px;
+  background: var(--ink); color: var(--paper);
+  border: none; font-size: 12px; font-weight: 500;
+  transition: opacity 0.2s;
+}
+.addBtn:hover { opacity: 0.85; }
+.noDayTasks { font-size: 13px; color: var(--muted); padding: 16px 0; text-align: center; }
+.list { display: flex; flex-direction: column; gap: 1px; }

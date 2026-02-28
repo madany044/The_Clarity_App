@@ -1,0 +1,56 @@
+.page { width: 100%; }
+.header { margin-bottom: 20px; }
+.screenLabel { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.title { font-size: 34px; letter-spacing: -1px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+@media (max-width: 600px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+.stat {
+  background: var(--paper); border: 1px solid var(--subtle);
+  border-radius: 14px; padding: 18px; text-align: center;
+}
+.statNum { font-family: 'DM Serif Display', serif; font-size: 32px; }
+.statLabel { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+.toolbar { margin-bottom: 12px; }
+.search {
+  width: 100%; padding: 11px 16px;
+  border: 1.5px solid var(--subtle); border-radius: 10px;
+  font-size: 14px; color: var(--ink); background: var(--paper);
+  outline: none; transition: border-color 0.2s;
+}
+.search:focus { border-color: var(--ink); }
+.search::placeholder { color: var(--muted); }
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.filter {
+  padding: 6px 16px; border-radius: 100px;
+  border: 1.5px solid var(--subtle); background: var(--paper);
+  font-size: 12px; color: var(--muted); transition: all 0.15s;
+}
+.filter:hover { border-color: var(--muted); }
+.filterActive { border-color: var(--ink) !important; color: var(--ink); background: var(--subtle); }
+
+.taskGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+@media (max-width: 800px) { .taskGrid { grid-template-columns: 1fr; } }
+
+.groupLabel {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--muted); padding: 12px 0 6px;
+  border-bottom: 1px solid var(--subtle); margin-bottom: 2px;
+}
+.list { display: flex; flex-direction: column; gap: 1px; margin-bottom: 4px; }
+
+.empty {
+  text-align: center; padding: 60px 0;
+  color: var(--muted); font-size: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  grid-column: 1 / -1;
+}
+.emptyIcon { font-size: 36px; }

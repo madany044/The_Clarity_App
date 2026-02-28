@@ -1,0 +1,105 @@
+.page { width: 100%; }
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 12px; flex-wrap: wrap; }
+.screenLabel { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.title { font-size: 34px; letter-spacing: -1px; }
+
+.addBtn {
+  padding: 9px 16px; background: var(--ink); color: var(--paper);
+  border: none; border-radius: 100px; font-size: 13px; font-weight: 500;
+  transition: opacity 0.2s; flex-shrink: 0;
+}
+.addBtn:hover { opacity: 0.85; }
+
+.form {
+  background: var(--paper); border: 1px solid var(--subtle);
+  border-radius: 14px; padding: 16px; margin-bottom: 20px;
+}
+.iconRow { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+.iconBtn {
+  width: 32px; height: 32px; border-radius: 8px;
+  border: 1.5px solid var(--subtle); background: transparent;
+  font-size: 16px; transition: all 0.15s;
+}
+.iconBtn:hover { border-color: var(--muted); }
+.iconSel { border-color: var(--ink) !important; background: var(--subtle); }
+
+.formRow { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.input {
+  flex: 1; min-width: 140px; padding: 9px 12px;
+  border: 1.5px solid var(--subtle); border-radius: 9px;
+  font-size: 14px; color: var(--ink); background: var(--bg); outline: none;
+  transition: border-color 0.2s;
+}
+.input:focus { border-color: var(--ink); }
+.input::placeholder { color: var(--muted); }
+
+.colorRow { display: flex; gap: 6px; }
+.colorDot {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 2px solid transparent; transition: transform 0.15s;
+}
+.colorDot:hover { transform: scale(1.2); }
+.colorSel { border-color: var(--ink) !important; transform: scale(1.2); }
+.saveBtn {
+  padding: 9px 18px; background: var(--ink); color: var(--paper);
+  border: none; border-radius: 9px; font-size: 13px; font-weight: 500;
+  transition: opacity 0.2s;
+}
+.saveBtn:hover { opacity: 0.85; }
+
+/* Calendar grid */
+.calHeader {
+  display: flex; align-items: center;
+  padding: 0 0 8px; border-bottom: 1px solid var(--subtle);
+  margin-bottom: 4px;
+}
+.habitColLabel { flex: 1; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.dayHeaders { display: flex; gap: 6px; align-items: center; }
+.dayHeader { width: 32px; text-align: center; font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+.todayHeader { color: var(--accent); font-weight: 600; }
+.streakHeader { width: 36px; text-align: center; font-size: 13px; }
+
+.habitList { display: flex; flex-direction: column; gap: 2px; }
+.habitRow {
+  display: flex; align-items: center;
+  padding: 10px 8px; border-radius: 11px;
+  transition: background 0.15s;
+}
+.habitRow:hover { background: var(--subtle); }
+
+.habitInfo { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.habitIcon { font-size: 18px; }
+.habitName { font-size: 14px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.delBtn {
+  background: transparent; border: none; color: var(--muted);
+  font-size: 18px; opacity: 0; transition: opacity 0.15s;
+  padding: 0 4px;
+}
+.habitRow:hover .delBtn { opacity: 1; }
+.delBtn:hover { color: var(--danger); }
+.confirmRow { display: flex; gap: 4px; }
+.confirmDel { font-size: 11px; padding: 3px 8px; border-radius: 6px; border: none; background: var(--danger); color: white; font-weight: 500; }
+.cancelDel  { font-size: 11px; padding: 3px 8px; border-radius: 6px; border: none; background: var(--subtle); color: var(--muted); }
+
+.dayChecks { display: flex; gap: 6px; align-items: center; }
+.check {
+  width: 32px; height: 32px; border-radius: 8px;
+  border: 1.5px solid var(--subtle); background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.check:disabled { cursor: default; opacity: 0.5; }
+.checkToday:not(:disabled) { cursor: pointer; border-color: var(--muted); }
+.checkToday:not(:disabled):hover { border-color: var(--ink); background: var(--subtle); }
+.checked { border-color: transparent !important; }
+
+.streak { width: 36px; text-align: center; font-size: 13px; font-weight: 600; color: var(--muted); }
+.streakActive { color: var(--accent); }
+
+.empty {
+  text-align: center; padding: 60px 0;
+  color: var(--muted); font-size: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.emptyIcon { font-size: 36px; }

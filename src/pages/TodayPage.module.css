@@ -1,0 +1,82 @@
+.page { width: 100%; }
+
+.header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 24px;
+  flex-wrap: wrap; gap: 12px;
+}
+
+.screenLabel {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.title { font-size: 34px; letter-spacing: -1px; line-height: 1.1; }
+.date  { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+.addBtn {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--ink); color: var(--paper);
+  border: none; border-radius: 100px;
+  padding: 10px 20px; font-size: 13px; font-weight: 500;
+  transition: opacity 0.2s; flex-shrink: 0;
+}
+.addBtn:hover { opacity: 0.85; }
+
+.progressWrap { margin-bottom: 28px; }
+.progressMeta {
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: var(--muted); margin-bottom: 7px;
+}
+.pct { font-weight: 500; color: var(--ink); }
+.progressBg { height: 5px; background: var(--subtle); border-radius: 100px; overflow: hidden; }
+.progressFill {
+  height: 100%; background: var(--accent);
+  border-radius: 100px; transition: width 0.5s ease;
+}
+
+/* Two column layout on wide screens */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .columns { grid-template-columns: 1fr; }
+}
+
+.column {
+  background: var(--paper);
+  border: 1px solid var(--subtle);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.sectionLabel {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--muted); padding-bottom: 10px;
+  border-bottom: 1px solid var(--subtle);
+  margin-bottom: 6px;
+}
+.list { display: flex; flex-direction: column; gap: 1px; }
+
+.empty {
+  text-align: center; padding: 60px 0;
+  color: var(--muted); font-size: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.emptyIcon { font-size: 36px; }
+
+.emptyColumn {
+  color: var(--muted); font-size: 13px;
+  padding: 20px 0; text-align: center;
+}
+
+.allDone {
+  margin-top: 20px; padding: 16px 20px;
+  background: #f0fdf4; border-radius: 12px;
+  font-size: 14px; color: #2d7a4a; text-align: center;
+}

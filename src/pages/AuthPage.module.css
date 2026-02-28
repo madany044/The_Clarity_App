@@ -1,0 +1,94 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--subtle);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.logo span { color: var(--accent); font-style: italic; }
+
+.tagline { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+
+.tabs {
+  display: flex;
+  background: var(--subtle);
+  border-radius: 100px;
+  padding: 3px;
+  margin-bottom: 24px;
+}
+.tab, .tabActive {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background: transparent;
+  color: var(--muted);
+}
+.tabActive { background: var(--ink); color: var(--paper); }
+
+.form { display: flex; flex-direction: column; gap: 14px; }
+
+.field { display: flex; flex-direction: column; gap: 5px; }
+
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.input {
+  padding: 11px 14px;
+  border: 1.5px solid var(--subtle);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input:focus { border-color: var(--ink); }
+.input::placeholder { color: var(--muted); }
+
+.btn {
+  margin-top: 4px;
+  padding: 12px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.btn:hover:not(:disabled) { opacity: 0.85; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.error   { font-size: 13px; color: var(--danger); background: #fdf0f0; border-radius: 8px; padding: 10px 12px; }
+.success { font-size: 13px; color: var(--priority-low); background: #f0fdf4; border-radius: 8px; padding: 10px 12px; }
+
+.footnote { font-size: 12px; color: var(--muted); text-align: center; margin-top: 20px; }
+.link { color: var(--accent); cursor: pointer; }
+.link:hover { text-decoration: underline; }
