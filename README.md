@@ -64,45 +64,6 @@ Open [http://localhost:5173](http://localhost:5173) — sign up and you're in! �
 
 ---
 
-## 🌐 Deploy to Vercel (Free)
-
-1. Push to GitHub:
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/clarity-app.git
-git push -u origin main
-```
-
-2. Go to [vercel.com](https://vercel.com) → **New Project** → Import your repo
-
-3. Add all 6 environment variables from your `.env` file in the Vercel dashboard
-
-4. Click **Deploy** — live in ~60 seconds! 🎉
-
----
-
-## 📁 Project Structure
-```
-clarity-app/
-├── src/
-│   ├── components/         # TaskItem, TaskModal
-│   ├── hooks/
-│   │   ├── useAuth.jsx     # Firebase Auth
-│   │   ├── useTasks.js     # Firestore tasks CRUD + realtime
-│   │   ├── useHabits.js    # Firestore habits + logs
-│   │   ├── useTimer.js     # Pomodoro timer
-│   │   └── useNotifications.js
-│   ├── lib/
-│   │   └── firebase.js     # Firebase init
-│   ├── pages/              # All 5 pages + Dashboard shell
-│   └── styles/global.css
-├── firestore.rules          # Security rules
-├── .env.example
-└── README.md
-```
-
 ---
 
 ## 🛠️ Tech Stack
@@ -112,3 +73,11 @@ clarity-app/
 - **React Router v6**
 - **date-fns**
 - **CSS Modules**
+
+<div align="center">
+  
+## Designed & Developed By Madan Y
+ **Email**: madanmadany2004@gmail.com 
+
+
+</div>
