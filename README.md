@@ -2,6 +2,14 @@
 
 A clean, distraction-free productivity app built with **React + Vite + Firebase**.
 
+---
+## 🌐 Live Demo
+
+### The project is successfully deployed and accessible online:
+ 
+👉 https://the-clarity-app-26sx.vercel.app/auth
+
+---
 ## ✨ Features
 - ✅ Task management — create, edit, delete, complete
 - 🏷️ Priority tags (High / Medium / Low) + custom tags
